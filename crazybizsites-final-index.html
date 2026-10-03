@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070b">
+<meta name="description" content="CrazyBizSites creates beautiful, mobile-first websites for local businesses, with personal support from preview to launch. Don't just get found. Get chosen.">
+<meta property="og:title" content="CrazyBizSites | Don't Just Get Found. Get Chosen.">
+<meta property="og:description" content="Beautiful websites for real businesses. Free preview. Personal attention. Straightforward pricing.">
+<title>CrazyBizSites | Don't Just Get Found. Get Chosen.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Permanent+Marker&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#05070b;--panel:#0b0d13;--panel2:#11131a;--white:#fff;
+ --muted:#aaaeb9;--orange:#ff6a00;--orange2:#ff8a18;--purple:#8b5cf6;
+ --blue:#38bdf8;--green:#28e27b;--pink:#ff3ea5;--gold:#ffd45e;
+ --line:rgba(255,255,255,.12);--max:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.13;background-image:radial-gradient(#fff .5px,transparent .6px);background-size:28px 28px}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.site{min-height:100vh}
+.nav{position:fixed;z-index:40;top:0;left:0;right:0;background:linear-gradient(#05070bf2,transparent);padding:14px max(16px,calc((100vw - var(--max))/2));display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font:700 14px "Space Grotesk";letter-spacing:.05em}
+.brand b{color:var(--orange)}.mark{width:32px;height:32px;border-radius:9px;border:1px solid #ff6a0080;display:grid;place-items:center;color:var(--orange);background:#ff6a0012;font-size:11px;box-shadow:0 0 25px #ff6a0020}
+.navlinks{display:flex;gap:20px;align-items:center;font-size:10px;letter-spacing:.12em;color:#c9cbd2}
+.navlinks a:hover{color:#fff}.navlinks .navbtn{color:#fff;background:var(--orange);padding:10px 14px;border-radius:999px;font-weight:700;box-shadow:0 8px 30px #ff6a0038}
+main{padding-bottom:20px}.page{display:none;min-height:100vh}.page.active{display:block}
+.wrap{width:min(var(--max),100%);margin:auto;padding:110px 20px 70px}
+.kicker{font-size:10px;font-weight:700;letter-spacing:.23em;color:var(--orange);text-transform:uppercase;margin-bottom:15px}
+h1,h2,h3{font-family:"Space Grotesk";margin:0 0 18px;letter-spacing:-.055em;line-height:.92}
+h1{font-size:clamp(48px,10vw,105px)}h2{font-size:clamp(40px,8vw,76px)}h3{font-size:28px}
+h1 em,h2 em{font-style:normal;color:var(--orange)}
+.lead{max-width:650px;color:#c0c2cb;line-height:1.65;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--orange),#ff4c00);color:#fff;font-weight:800;font-size:11px;letter-spacing:.06em;padding:14px 18px;box-shadow:0 12px 35px #ff6a0038}
+.btn.alt{background:#ffffff10;border:1px solid var(--line);box-shadow:none}.btn.green{background:var(--green);color:#04120a}.btn.purple{background:linear-gradient(135deg,#7c3aed,#a855f7)}
+.hero{position:relative;min-height:100svh;overflow:hidden;background:radial-gradient(circle at 75% 32%,#ff6a0018,transparent 25%),radial-gradient(circle at 25% 65%,#7c3aed1b,transparent 30%)}
+.hero .wrap{min-height:100svh;display:grid;grid-template-columns:.95fr 1.05fr;gap:35px;align-items:center;padding-top:125px}
+.hero-copy{position:relative;z-index:3}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.hero-media{position:relative;height:min(74vh,680px);min-height:430px}
+.hero-photo{position:absolute;overflow:hidden;border:1px solid #ffffff25;border-radius:24px;box-shadow:0 25px 90px #000b}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#000b)}
+.hp1{inset:7% 10% 7% 14%}.hp2{width:42%;height:32%;left:0;bottom:1%;transform:rotate(-5deg)}.hp3{width:38%;height:30%;right:0;top:0;transform:rotate(5deg)}
+.hero-tag{position:absolute;z-index:4;left:18px;bottom:18px;font:700 clamp(25px,5vw,55px)/.85 "Space Grotesk";letter-spacing:-.06em}
+.fade{animation:fade 12s infinite ease-in-out}.hp2{animation-delay:2s}.hp3{animation-delay:5s}
+@keyframes fade{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+.trustbar{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:32px}
+.trustbar div{font-size:10px;color:#d7d8de;border-top:1px solid var(--line);padding-top:9px}.trustbar b{color:var(--orange);display:block;margin-bottom:3px}
+.story{background:linear-gradient(#07090e,#10121a)}.two{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}
+.visual{height:64vh;min-height:430px;border-radius:28px;overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:0 25px 90px #0008}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,#000c)}
+.visual .stamp{position:absolute;z-index:2;left:18px;bottom:18px;font:700 clamp(35px,7vw,70px)/.85 "Space Grotesk";letter-spacing:-.07em}
+.float{position:absolute;z-index:5;background:#080a0eea;border:1px solid #ffffff24;backdrop-filter:blur(10px);border-radius:12px;padding:11px 13px;font-size:9px;letter-spacing:.15em;animation:float 4s infinite ease-in-out}
+.float.a{top:12%;right:-4%}.float.b{bottom:20%;left:-4%;animation-delay:1s}.float.c{top:43%;right:-6%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-9px) rotate(1deg)}}
+.pills{display:grid;gap:10px;margin-top:25px}.pills div{border-bottom:1px solid var(--line);padding:11px 0;font-family:"Space Grotesk";font-size:18px}.pills b{color:var(--orange);margin-right:8px}
+.realization{text-align:center;background:#05070b}.realization .lead{margin:auto}.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;height:190px;margin:35px auto 0;max-width:850px}.mini div{overflow:hidden;border-radius:16px;border:1px solid var(--line)}.mini div:nth-child(2){transform:translateY(10px)}.mini div:nth-child(3){transform:translateY(-7px)}
+.showcase{background:radial-gradient(circle at 50% 20%,#7c3aed1d,transparent 35%),#080a10}.track{display:flex;gap:12px;overflow:auto;padding:12px 2px 24px;margin-top:35px;scrollbar-width:none}.track::-webkit-scrollbar{display:none}.card{flex:0 0 235px;height:305px;border-radius:22px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:0 20px 60px #0008}.card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,#000d)}.card span{position:absolute;z-index:2;bottom:14px;left:15px;font-size:10px;font-weight:800;letter-spacing:.2em}
+.rescue{background:radial-gradient(circle at 50% 25%,#ff6a001c,transparent 30%),linear-gradient(180deg,#07090d,#020306);overflow:hidden}
+.rescue-banner{text-align:center;position:relative;padding:40px 0 30px}.rescue-banner h2{font-size:clamp(55px,13vw,130px);margin:0}.rescue-banner .big{font-family:"Permanent Marker";color:var(--orange);font-size:clamp(55px,13vw,135px);transform:rotate(-2deg);display:inline-block;text-shadow:0 0 35px #ff6a0035}
+.saves{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px auto 25px;max-width:900px}.save{padding:18px 10px;text-align:center;border:1px solid var(--line);border-radius:18px;background:#ffffff06}.save .icon{font-size:27px;margin-bottom:7px}.save b{display:block;font-size:11px}.save span{display:block;color:#aeb1bb;font-size:10px;margin-top:4px}
+.deal{font-family:"Permanent Marker";font-size:clamp(22px,5vw,45px);color:#fff;display:inline-block;transform:rotate(-3deg);margin:15px 0 35px}.deal:after{content:"";display:block;height:3px;background:var(--orange);transform:rotate(-2deg);border-radius:50%}
+.pricing{background:#07090d}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.plan{background:#f8f8f5;color:#0a0c11;border-radius:22px;padding:20px;position:relative;border:2px solid transparent;box-shadow:0 18px 50px #0006}.plan.pop{border-color:var(--orange);transform:translateY(-7px)}.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;padding:6px 11px;border-radius:999px;font-size:9px;font-weight:800;white-space:nowrap}.plan h3{font-size:24px;margin-bottom:4px}.plan .sub{font-size:11px;color:#666;margin-bottom:15px}.price{font:700 38px "Space Grotesk";margin:8px 0}.price small{font-size:12px;color:#666}.strike{text-decoration:line-through;color:#e32626;font-weight:700;font-size:18px}.check{font-size:11px;line-height:1.55;padding:4px 0}.check:before{content:"✓";color:#ff6a00;font-weight:900;margin-right:7px}.plan .btn{width:100%;margin-top:16px}
+.conditions{color:#aeb1bb;font-size:10px;line-height:1.6;max-width:900px;margin:20px auto 0;text-align:center}.extras{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.extra{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fff7;color:#d7d9df}.extra h3{font-size:18px;color:#fff}.support{display:flex;gap:10px;flex-wrap:wrap}.support span{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:7px 10px}
+.cta{text-align:center;background:linear-gradient(180deg,#080a10,#040509);padding-bottom:100px}.cta .wrap{padding-top:75px}.hand{font-family:"Permanent Marker";color:var(--orange);font-size:clamp(22px,5vw,42px);transform:rotate(-2deg);display:inline-block;margin:15px}.contact-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}.contact-buttons .ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}.contact-buttons .wa{background:var(--green);color:#04120a}.contact-buttons .mail{background:#198cff}
+.subpage{background:linear-gradient(180deg,#07090e,#05070b);min-height:100vh}.subhero{text-align:center;padding-bottom:35px}.subhero .lead{margin:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}.step{border:1px solid var(--line);border-radius:18px;padding:20px;background:#ffffff05}.step b{color:var(--orange);font-size:11px}.step h3{font-size:21px;margin:12px 0 8px}.step p{font-size:12px;color:#aeb1bb;line-height:1.55}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.about-photo{height:520px;border-radius:25px;overflow:hidden;border:1px solid var(--line)}.about-copy p{color:#bfc2cb;line-height:1.7;font-size:14px}.quote{border-left:3px solid var(--orange);padding-left:15px;color:#fff;font-family:"Permanent Marker";font-size:23px;margin-top:25px}
+.form{max-width:760px;margin:25px auto 0;background:#ffffff06;border:1px solid var(--line);border-radius:25px;padding:22px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:10px;letter-spacing:.13em;color:#bbb}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#05070b;color:#fff;border-radius:12px;padding:13px;outline:none}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:10px;color:#888;line-height:1.5;margin-top:12px}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.article{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#ffffff05}.article .artimg{height:190px}.article div:last-child{padding:17px}.article h3{font-size:20px}.article p{font-size:11px;color:#aeb1bb;line-height:1.55}
+.legal{max-width:850px;margin:auto;color:#b9bbc4;font-size:12px;line-height:1.7}.legal h3{color:#fff;font-size:24px;margin-top:30px}.legal strong{color:#fff}
+.footer{border-top:1px solid var(--line);background:#030407;padding:35px 20px 105px;text-align:center;color:#7f828d;font-size:10px;line-height:1.7}.footer .brand{justify-content:center;color:#fff;margin-bottom:12px}.footer-links{display:flex;justify-content:center;gap:17px;flex-wrap:wrap;margin:15px 0}.footer-links a:hover{color:#fff}.social-mini{display:flex;justify-content:center;gap:9px;margin:15px}.social-mini a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);font-weight:800;color:#fff}.bottom{position:fixed;z-index:45;left:10px;right:10px;bottom:10px;padding:7px;background:#05070be8;backdrop-filter:blur(15px);border:1px solid var(--line);border-radius:999px;display:none;gap:7px}.bottom a{flex:1;text-align:center;padding:11px 5px;border-radius:999px;font-size:9px;font-weight:800}.bottom .main{background:var(--orange)}
+.reveal{animation:rise .7s both}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(max-width:800px){
+ .navlinks{display:none}.nav{padding:12px 15px}.navbtn{display:block}
+ .hero .wrap{display:block;padding-top:105px}.hero-media{height:48vh;min-height:330px;margin-top:20px}.hp1{inset:7% 12% 8% 12%}.hp2{width:39%;height:34%}.hp3{width:35%;height:29%}
+ .trustbar{grid-template-columns:repeat(2,1fr)}.trustbar div:last-child{grid-column:1/-1}
+ .wrap{padding:85px 17px 55px}.two,.about-grid{grid-template-columns:1fr;gap:27px}.visual{height:58vh;min-height:390px}
+ .mini{height:125px}.mini div{border-radius:10px}.saves{grid-template-columns:repeat(2,1fr)}.pricing-grid{grid-template-columns:1fr}.plan.pop{transform:none}.extras{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}.journal-grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .bottom{display:flex}.footer{padding-bottom:115px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<body>
+<div class="site">
+
+<header class="nav">
+  <a class="brand" href="#home"><span class="mark">CB</span>CRAZY<span style="color:var(--orange)">BIZ</span>SITES</a>
+  <nav class="navlinks">
+    <a href="#home">HOME</a><a href="#preview">PREVIEW</a><a href="#how">HOW WE WORK</a><a href="#about">ABOUT</a><a href="#journal">JOURNAL</a><a href="#contact">CONTACT</a>
+    <a class="navbtn" href="#preview">GET MY FREE PREVIEW</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page active" id="home">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy reveal">
+        <div class="kicker">WEBSITES FOR REAL BUSINESSES</div>
+        <h1>DON'T JUST<br>BE FOUND.<br><em>BE CHOSEN.</em></h1>
+        <p class="lead">Beautiful, high-converting websites for local businesses that are too busy running the business.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#preview">GET MY FREE PREVIEW →</a>
+          <a class="btn alt" href="#how">SEE HOW IT WORKS</a>
+        </div>
+        <div class="trustbar">
+          <div><b>✓ REAL PEOPLE</b>Personal support</div>
+          <div><b>✓ MOBILE FIRST</b>Looks great everywhere</div>
+          <div><b>✓ BUILT FOR BUSINESS</b>Turn visitors into enquiries</div>
+          <div><b>✓ AFFORDABLE</b>Professional, not over-priced</div>
+          <div><b>✓ WE STAY WITH YOU</b>Help after launch</div>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Business website examples">
+        <div class="hero-photo hp1 fade"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Restaurant business"></div>
+        <div class="hero-photo hp2 fade"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=85" alt="Salon business"></div>
+        <div class="hero-photo hp3 fade"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85" alt="Construction business"></div>
+        <div class="hero-tag">LOOK GOOD.<br>GET CHOSEN.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap two">
+      <div class="visual">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Busy business team">
+        <div class="stamp">YOU'RE<br>BUSY.</div>
+        <div class="float a">NO TIME!</div><div class="float b">NO IDEA WHERE TO START?</div><div class="float c">WHO DO I TRUST?</div>
+      </div>
+      <div>
+        <div class="kicker">THE STRUGGLE</div>
+        <h2>You're good at your business.<br><em>You shouldn't have to become good at websites too.</em></h2>
+        <p class="lead">You have customers to serve, staff to manage and a hundred things waiting for you. Your online presence keeps sliding down the list.</p>
+        <div class="pills">
+          <div><b>01</b> No time.</div><div><b>02</b> No appetite for tech headaches.</div><div><b>03</b> No idea who to trust.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="realization">
+    <div class="wrap">
+      <div class="kicker">THE FIRST IMPRESSION</div>
+      <h2>People search.<br><em>Then they decide.</em></h2>
+      <p class="lead">Your website is often part of that decision. It doesn't need to be complicated. It needs to make the right impression.</p>
+      <div class="mini">
+        <div><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Professional office"></div>
+        <div><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Dental business"></div>
+        <div><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Auto business"></div>
+        <div><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Real estate business"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="wrap">
+      <div class="kicker">THE POSSIBILITY</div>
+      <h2>Imagine <em>yours</em> here.</h2>
+      <p class="lead">Different businesses. Different personalities. One goal: look professional, build trust and make it easy for customers to take the next step.</p>
+      <div class="track">
+        <article class="card"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Salon"><span>SALON</span></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85" alt="Dentist"><span>DENTIST</span></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Contractor"><span>CONTRACTOR</span></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant"><span>RESTAURANT</span></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85" alt="Real estate"><span>REAL ESTATE</span></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85" alt="Professional business"><span>PROFESSIONAL</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rescue">
+    <div class="wrap rescue-banner">
+      <div class="kicker">AND THEN...</div>
+      <h2>CRAZY<span class="big">BIZ</span>SITES.COM</h2>
+      <h2 style="font-size:clamp(32px,7vw,70px)">TO THE <em>RESCUE!</em></h2>
+      <div class="saves">
+        <div class="save"><div class="icon">💰</div><b>SAVE YOU MONEY</b><span>Smart, straightforward pricing</span></div>
+        <div class="save"><div class="icon">⏱</div><b>SAVE YOU TIME</b><span>We handle the digital work</span></div>
+        <div class="save"><div class="icon">🧠</div><b>SAVE YOU EFFORT</b><span>No tech maze to navigate</span></div>
+        <div class="save"><div class="icon">📈</div><b>BEST RESULTS</b><span>Built around your business</span></div>
+      </div>
+      <div class="deal">That sound like a good deal?</div>
+      <br><a class="btn" href="#preview">LET US CREATE YOUR FREE PREVIEW →</a>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="wrap">
+      <div style="text-align:center">
+        <div class="kicker">HALLOWEEN SPECIAL</div>
+        <h2>Pick the level<br><em>that fits your business.</em></h2>
+        <p class="lead" style="margin:auto">Start with a professional presence. Step up when you want more.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="plan">
+          <h3>STANDARD</h3><div class="sub">A great start for most businesses</div>
+          <div class="strike">$1,299.99</div><div class="price">$499.99<small>*</small></div>
+          <div class="sub">HALLOWEEN INTRODUCTORY OFFER</div>
+          <div class="check">Custom website design</div><div class="check">Mobile-first responsive design</div><div class="check">Up to 6 pages*</div><div class="check">Contact / enquiry functionality</div><div class="check">Basic SEO setup</div><div class="check">Social media integration</div><div class="check">SSL setup</div><div class="check">Launch assistance</div><div class="check">Personal CrazyBizSites support</div>
+          <a class="btn" href="#preview">GET STANDARD →</a>
+        </article>
+        <article class="plan pop">
+          <div class="badge">MOST POPULAR</div>
+          <h3>GOLD</h3><div class="sub">A little more for growing businesses</div>
+          <div class="price">$599.99<small>*</small></div>
+          <div class="sub">EVERYTHING IN STANDARD, PLUS</div>
+          <div class="check">Additional pages where required</div><div class="check">Enhanced design elements</div><div class="check">Enhanced SEO setup</div><div class="check">Google Maps integration</div><div class="check">Review / testimonial section</div><div class="check">Basic analytics setup</div><div class="check">Priority support</div><div class="check">More design flexibility</div>
+          <a class="btn" href="#preview">GET GOLD →</a>
+        </article>
+        <article class="plan">
+          <h3>PLATINUM</h3><div class="sub">For businesses that want more</div>
+          <div class="price">$699.99<small>*</small></div>
+          <div class="sub">EVERYTHING IN GOLD, PLUS</div>
+          <div class="check">Premium design features</div><div class="check">Advanced functionality options</div><div class="check">Enhanced local SEO options</div><div class="check">Booking / service features where required</div><div class="check">Premium integrations where suitable</div><div class="check">Extended support & revisions</div><div class="check">Additional integrations as agreed</div><div class="check">Tailored to your business needs</div>
+          <a class="btn purple" href="#preview">GET PLATINUM →</a>
+        </article>
+      </div>
+      <div class="conditions">
+        *Introductory offer applies to agreed project scope. Up to six pages on Standard; additional pages/features may be quoted separately. Gold and Platinum inclusions depend on the agreed project scope. Client content, third-party paid services, specialist integrations, ecommerce, advanced applications, photography/video and other non-standard requirements may incur additional charges. Full conditions are available on the Terms & Conditions page.
+      </div>
+      <div class="extras">
+        <div class="extra"><h3>🌐 DOMAIN & HOSTING</h3>Not included in the website prices. We'll help find a suitable option, set it up and bill the applicable provider cost separately. Any referral/affiliate relationship, where applicable, will be handled transparently.</div>
+        <div class="extra"><h3>⚙️ AFTER LAUNCH · KEEP IT LOOKING GOOD</h3><div class="support"><span>$29.99/mo · Keep it running</span><span>$59.99/mo · Keep it fresh</span><span>$99.99/mo · Full concierge</span></div><p style="font-size:10px;color:#9ea2ad">Optional support. Exact scope and included changes are agreed for each plan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="kicker">YOUR TURN</div>
+      <h2>GET MY <em>FREE PREVIEW</em></h2>
+      <div class="hand">It costs you NOTHING! ✦</div>
+      <p class="lead" style="margin:auto">Tell us about your business. We'll create a preview so you can see what your online presence could look like. No payment required to request one.</p>
+      <div class="contact-buttons">
+        <a class="btn ig" href="https://instagram.com/crazybizsites" target="_blank" rel="noopener">📸 INSTAGRAM · PREFERRED</a>
+        <a class="btn wa" href="https://wa.me/918828062433?text=Hi%20CrazyBizSites!%20I'd%20like%20a%20free%20preview%20for%20my%20business.%20My%20business%20name%20is%20_____%20and%20I%20run%20a%20_____.">💬 WHATSAPP</a>
+        <a class="btn mail" href="mailto:crazybizsites123@gmail.com?subject=Free%20Website%20Preview">✉ EMAIL</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="page subpage" id="preview">
+  <div class="wrap subhero">
+    <div class="kicker">YOUR PREVIEW CONCIERGE</div>
+    <h1>LET'S CREATE<br><em>YOUR PREVIEW.</em></h1>
+    <p class="lead">You don't have to build anything. Tell us a little about your business, and we'll take it from there.</p>
+    <form class="form" onsubmit="sendPreview(event)">
+      <div class="fields">
+        <div class="field"><label>BUSINESS NAME</label><input id="biz" required placeholder="Your business name"></div>
+        <div class="field"><label>WHAT DO YOU DO?</label><input id="type" required placeholder="Salon, dentist, contractor..."></div>
+        <div class="field"><label>CITY / AREA</label><input id="city" placeholder="City or service area"></div>
+        <div class="field"><label>PREVIEW STYLE</label><select id="style"><option>Surprise me</option><option>Modern</option><option>Luxury</option><option>Bold</option><option>Elegant</option><option>Friendly</option></select></div>
+        <div class="field full"><label>ANYTHING WE SHOULD KNOW?</label><textarea id="notes" placeholder="What makes your business special? Website/social link? Anything you'd like us to include?"></textarea></div>
+      </div>
+      <button class="btn" type="submit">SEND MY PREVIEW REQUEST →</button>
+      <div class="form-note">Your request opens WhatsApp with the details filled in. No payment is taken here. We may contact you to clarify the preview before creating it.</div>
+    </form>
+  </div>
+</section>
+
+<section class="page subpage" id="how">
+  <div class="wrap">
+    <div class="subhero"><div class="kicker">HOW WE WORK</div><h1>SIMPLE.<br><em>PERSONAL.</em><br>DONE.</h1><p class="lead">You run the business. We take care of the internet.</p></div>
+    <div class="steps">
+      <div class="step"><b>01 · TELL US</b><h3>Tell us what you do.</h3><p>Send the basics. Business name, service, location, style and anything that matters.</p></div>
+      <div class="step"><b>02 · PREVIEW</b><h3>We show you.</h3><p>We create a personalized direction so you can see the potential before committing to the build.</p></div>
+      <div class="step"><b>03 · APPROVE</b><h3>You decide.</h3><p>Choose the package and agree the scope. No mystery work and no surprise additions.</p></div>
+      <div class="step"><b>04 · LAUNCH</b><h3>We take it home.</h3><p>We build, refine, connect the essentials and help get your site ready to launch.</p></div>
+    </div>
+    <div class="two" style="margin-top:35px"><div><div class="kicker">AFTER LAUNCH</div><h2>WE DON'T<br><em>DISAPPEAR.</em></h2></div><div><p class="lead">Need a change later? Want something updated? Choose optional ongoing support, or simply contact us for a new requirement. Larger work is quoted before it is done.</p><a class="btn" href="#contact">TALK TO US →</a></div></div>
+  </div>
+</section>
+
+<section class="page subpage" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo"><img src="team.jpg" alt="CrazyBizSites family team" onerror="this.style.display='none'"></div>
+      <div class="about-copy">
+        <div class="kicker">ABOUT CRAZYBIZSITES</div>
+        <h1>FAMILY OWNED.<br><em>FAMILY RUN.</em></h1>
+        <p>We're building CrazyBizSites around a simple idea: small and local businesses deserve access to a professional online presence without the usual agency drama, confusing tech language or oversized process.</p>
+        <p>We listen first. We show you what is possible. Then we handle the digital side while you get on with running your business.</p>
+        <div class="quote">“We treat your business like it's ours.”</div>
+        <p style="margin-top:22px">Don't worry. We'll take care of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page subpage" id="journal">
+  <div class="wrap">
+    <div class="subhero"><div class="kicker">CRAZYBIZ JOURNAL</div><h1>THE STUFF<br><em>BUSINESS OWNERS</em><br>SHOULD KNOW.</h1><p class="lead">Practical ideas about websites, local search, trust, online presence and growing a business without making the digital side your second full-time job.</p></div>
+    <div class="journal-grid">
+      <article class="article"><div class="artimg"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt=""></div><div><h3>Do I Really Need a Website?</h3><p>When social media and maps are not enough, and what a simple website can actually do for a local business.</p></div></article>
+      <article class="article"><div class="artimg"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt=""></div><div><h3>What Makes a Business Look Trustworthy Online?</h3><p>The small details customers notice before they ever call, message or visit.</p></div></article>
+      <article class="article"><div class="artimg"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80" alt=""></div><div><h3>Website vs Instagram: Do You Need Both?</h3><p>What each one does, where they overlap and why they work better together.</p></div></article>
+    </div>
+    <p class="conditions" style="margin-top:25px">New articles and deeper guides will be added as the Journal grows.</p>
+  </div>
+</section>
+
+<section class="page subpage" id="contact">
+  <div class="wrap">
+    <div class="subhero"><div class="kicker">LET'S TALK</div><h1>YOUR BUSINESS.<br><em>OUR ATTENTION.</em></h1><p class="lead">Want a free preview? Instagram is our preferred first step. WhatsApp and email are always open too.</p></div>
+    <div class="contact-buttons">
+      <a class="btn ig" href="https://instagram.com/crazybizsites" target="_blank" rel="noopener">📸 INSTAGRAM · PREFERRED</a>
+      <a class="btn wa" href="https://wa.me/918828062433?text=Hi%20CrazyBizSites!%20I'd%20like%20a%20free%20preview%20for%20my%20business.%20My%20business%20name%20is%20_____%20and%20I%20run%20a%20_____.">💬 WHATSAPP · +91 88280 62433</a>
+      <a class="btn mail" href="mailto:crazybizsites123@gmail.com?subject=CrazyBizSites%20Enquiry">✉ crazybizsites123@gmail.com</a>
+    </div>
+    <div style="max-width:760px;margin:50px auto 0;text-align:center"><div class="kicker">FIRST STEP</div><h2>GET YOUR FREE<br><em>PREVIEW.</em></h2><p class="lead" style="margin:auto">No payment. No complicated form. No obligation. Just show us your business and let us show you an idea.</p><a class="btn" style="margin-top:20px" href="#preview">START THE PREVIEW REQUEST →</a></div>
+  </div>
+</section>
+
+<section class="page subpage" id="terms">
+  <div class="wrap legal">
+    <div class="kicker">LEGAL</div><h1>TERMS &<br><em>CONDITIONS.</em></h1>
+    <p><strong>Last updated: 2026</strong></p>
+    <h3>1. Scope</h3><p>CrazyBizSites provides website design, development and related digital services according to the project scope agreed with the client. The final scope, package, price, timeline, revisions and deliverables should be confirmed before paid work begins.</p>
+    <h3>2. Pricing and promotional offers</h3><p>Promotional prices apply only to the stated offer and agreed scope. The Halloween introductory Standard offer is $499.99 for an agreed business website project of up to six pages. Additional pages, advanced functionality, ecommerce, custom applications, specialist integrations, extensive copywriting, professional media, third-party services and other non-standard requirements may cost extra.</p>
+    <h3>3. Content and approvals</h3><p>The client is responsible for supplying accurate business information and for having the right to use any text, images, logos, trademarks or other material supplied to CrazyBizSites. The client should review and approve material before publication. CrazyBizSites is not responsible for errors in information supplied or approved by the client.</p>
+    <h3>4. Revisions</h3><p>Reasonable revisions within the agreed scope may be included in the selected package. Substantial changes, repeated changes after approval, or work outside the agreed scope may be quoted separately.</p>
+    <h3>5. Domain and hosting</h3><p>Domain registration and hosting are separate third-party services unless expressly included in a written project agreement. CrazyBizSites may help identify and set up suitable services. Applicable provider charges are payable by the client. Where CrazyBizSites receives a referral or affiliate commission, the relationship will be handled in accordance with applicable disclosure requirements.</p>
+    <h3>6. Third-party services</h3><p>External platforms, software, plugins, payment providers, maps, booking tools, email services and other third-party products are subject to their own terms, availability and pricing.</p>
+    <h3>7. Payment and launch</h3><p>Payment terms are confirmed before work begins. Launch timing depends on timely receipt of required content, approvals, payments and third-party services. Ownership, access and handover arrangements will follow the project agreement.</p>
+    <h3>8. Ongoing support</h3><p>Optional monthly support plans provide only the services and level of assistance stated for the selected plan. Larger projects or work outside the included scope may be quoted separately.</p>
+    <h3>9. Limitation</h3><p>CrazyBizSites aims to provide a professional service but does not guarantee specific search rankings, sales, enquiries, revenue or business outcomes. Digital performance depends on many factors outside our control.</p>
+    <h3>10. Changes</h3><p>These terms may be updated as the business and services evolve. The terms applicable to a project will be the terms agreed at the relevant time.</p>
+  </div>
+</section>
+
+<section class="page subpage" id="privacy">
+  <div class="wrap legal">
+    <div class="kicker">LEGAL</div><h1>PRIVACY<br><em>POLICY.</em></h1>
+    <p><strong>Last updated: 2026</strong></p>
+    <h3>Information we receive</h3><p>When you contact CrazyBizSites, we may receive your name, business name, contact details, location, website or social links, project information and messages.</p>
+    <h3>How we use it</h3><p>We use information to respond to enquiries, prepare previews, communicate about projects, provide services, process agreed transactions and provide support.</p>
+    <h3>Sharing</h3><p>We may use third-party services such as WhatsApp, Instagram, email providers, hosting companies, domain registrars, payment processors, analytics services and other tools needed to provide the requested service. Those providers operate under their own policies.</p>
+    <h3>Marketing</h3><p>We do not sell personal information. We may contact you about your enquiry or services you requested. Marketing communications, where used, should include an appropriate way to opt out.</p>
+    <h3>Security and retention</h3><p>We take reasonable steps to protect information, but no internet transmission or storage system is guaranteed to be completely secure. Information may be retained as reasonably necessary for service, business, legal and accounting purposes.</p>
+    <h3>Contact</h3><p>Privacy questions can be sent to <a href="mailto:crazybizsites123@gmail.com" style="color:var(--orange)">crazybizsites123@gmail.com</a>.</p>
+  </div>
+</section>
+
+<section class="page subpage" id="disclaimer">
+  <div class="wrap legal">
+    <div class="kicker">LEGAL</div><h1>DISCLAIMER.</h1>
+    <h3>Website examples</h3><p>Images, layouts and business categories shown on this website may be demonstrations, concepts or stock imagery unless explicitly identified as a CrazyBizSites client project. They should not be interpreted as a claim that CrazyBizSites built or represents the businesses shown.</p>
+    <h3>Business results</h3><p>Website design, SEO setup and digital improvements can support a business, but no specific number of customers, leads, sales, ranking or revenue is guaranteed.</p>
+    <h3>Third-party services</h3><p>CrazyBizSites may recommend or facilitate domains, hosting, software and other third-party services. Availability, pricing, features and performance are controlled by those providers.</p>
+    <h3>Information</h3><p>Website content is general information and is not legal, financial, tax or professional advice. Clients should obtain appropriate professional advice for matters requiring specialist guidance.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <a class="brand" href="#home"><span class="mark">CB</span>CRAZY<span style="color:var(--orange)">BIZ</span>SITES</a>
+  <div>DON'T JUST GET FOUND. GET CHOSEN.</div>
+  <div class="social-mini">
+    <a href="https://instagram.com/crazybizsites" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+    <a href="https://wa.me/918828062433" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+    <a href="mailto:crazybizsites123@gmail.com" aria-label="Email">@</a>
+  </div>
+  <div class="footer-links">
+    <a href="#home">HOME</a><a href="#preview">FREE PREVIEW</a><a href="#how">HOW WE WORK</a><a href="#about">ABOUT</a><a href="#journal">JOURNAL</a><a href="#contact">CONTACT</a>
+    <a href="#terms">TERMS</a><a href="#privacy">PRIVACY</a><a href="#disclaimer">DISCLAIMER</a>
+  </div>
+  <div>© 2026 CrazyBizSites.com. All rights reserved.</div>
+</footer>
+
+<div class="bottom">
+  <a href="https://instagram.com/crazybizsites" target="_blank" rel="noopener">INSTAGRAM</a>
+  <a class="main" href="#preview">FREE PREVIEW</a>
+  <a href="https://wa.me/918828062433">WHATSAPP</a>
+</div>
+</div>
+
+<script>
+const pages=[...document.querySelectorAll('.page')];
+function showPage(){
+  let id=(location.hash||'#home').slice(1).split('?')[0];
+  if(!document.getElementById(id)) id='home';
+  pages.forEach(p=>p.classList.toggle('active',p.id===id));
+  window.scrollTo({top:0,behavior:'instant'});
+}
+window.addEventListener('hashchange',showPage);
+showPage();
+
+function sendPreview(e){
+  e.preventDefault();
+  const biz=document.getElementById('biz').value.trim();
+  const type=document.getElementById('type').value.trim();
+  const city=document.getElementById('city').value.trim();
+  const style=document.getElementById('style').value;
+  const notes=document.getElementById('notes').value.trim();
+  const msg=`Hi CrazyBizSites! I'd like to get a free preview.%0A%0ABusiness: ${encodeURIComponent(biz)}%0AWhat we do: ${encodeURIComponent(type)}%0ACity/area: ${encodeURIComponent(city)}%0APreferred style: ${encodeURIComponent(style)}%0ANotes: ${encodeURIComponent(notes)}`;
+  window.location.href=`https://wa.me/918828062433?text=${msg}`;
+}
+</script>
+</body>
+</html>
