@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070707" />
+  <meta name="description" content="CrazyBizSites 2.0 — websites engineered to make businesses impossible to ignore." />
+  <title>CrazyBizSites 2.0 — Don't Just Be Found. Be Chosen.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- CINEMATIC INTRO -->
+  <header class="hero" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <div class="hero-orb hero-orb-a"></div>
+      <div class="hero-orb hero-orb-b"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-scan"></div>
+    </div>
+
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="CrazyBizSites home">
+        <span class="brand-mark">CB</span>
+        <span>CRAZY<span>BIZ</span>SITES</span>
+      </a>
+      <a class="nav-cta" href="#preview">GET MY PREVIEW <span>↗</span></a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow reveal">YOUR BUSINESS. YOUR FIRST IMPRESSION.</p>
+
+      <h1 class="hero-title reveal">
+        DON'T JUST<br>
+        <span>BE FOUND.</span><br>
+        <em>BE CHOSEN.</em>
+      </h1>
+
+      <p class="hero-copy reveal">
+        We turn local businesses into the kind of brands people stop scrolling for.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="button button-primary" href="#preview">
+          <span>SEE WHAT YOUR BUSINESS COULD LOOK LIKE</span>
+          <b>→</b>
+        </a>
+        <a class="text-link" href="#showcase">WATCH THE EXPERIENCE ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>SCROLL TO ENTER</span>
+      <span class="scroll-line"></span>
+      <span>01 / 13</span>
+    </div>
+  </header>
+
+  <!-- THE FIRST PUNCH -->
+  <main>
+    <section class="statement section-dark" id="experience">
+      <div class="section-number">01</div>
+      <div class="statement-wrap">
+        <p class="kicker">THE OLD WAY</p>
+        <h2>Most websites<br><span>sit there.</span></h2>
+        <p class="statement-large">
+          Yours should <strong>do something.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- VISUAL TRANSFORMATION -->
+    <section class="transformation section-light">
+      <div class="section-number">02</div>
+      <div class="transformation-copy">
+        <p class="kicker">THE DIFFERENCE</p>
+        <h2>From <span>“who?”</span><br>to <span>“where do I book?”</span></h2>
+        <p>
+          Strategy, story, motion, imagery and conversion design are built into the experience,
+          not sprinkled on afterward.
+        </p>
+      </div>
+
+      <div class="fake-browser" aria-label="Animated website preview">
+        <div class="browser-bar">
+          <i></i><i></i><i></i>
+          <span>yourbusiness.com</span>
+        </div>
+        <div class="browser-stage">
+          <div class="stage-tag">LIVE PREVIEW</div>
+          <div class="stage-title">MAKE<br>THEM<br><b>STOP.</b></div>
+          <div class="stage-card">
+            <span>YOUR BUSINESS</span>
+            <strong>DESERVES A<br>BETTER FIRST<br>IMPRESSION.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="showcase section-dark" id="showcase">
+      <div class="section-number">03</div>
+      <div class="section-heading">
+        <p class="kicker">DON'T TAKE OUR WORD FOR IT</p>
+        <h2>See the<br><span>difference.</span></h2>
+      </div>
+
+      <div class="showcase-grid">
+        <article class="showcase-card card-barber">
+          <div class="card-glow"></div>
+          <p>01 / BARBERSHOP</p>
+          <h3>BUILT TO<br>TURN HEADS.</h3>
+          <span>EXPLORE →</span>
+        </article>
+
+        <article class="showcase-card card-diner">
+          <div class="card-glow"></div>
+          <p>02 / RESTAURANT</p>
+          <h3>COME<br>HUNGRY.</h3>
+          <span>EXPLORE →</span>
+        </article>
+
+        <article class="showcase-card card-salon">
+          <div class="card-glow"></div>
+          <p>03 / SALON</p>
+          <h3>YOUR<br>NEW LOOK.</h3>
+          <span>EXPLORE →</span>
+        </article>
+
+        <article class="showcase-card card-dental">
+          <div class="card-glow"></div>
+          <p>04 / DENTAL</p>
+          <h3>SMILE.<br>YOU'RE SEEN.</h3>
+          <span>EXPLORE →</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONCIERGE -->
+    <section class="concierge section-accent" id="preview">
+      <div class="section-number">04</div>
+      <div class="concierge-inner">
+        <p class="kicker">THE PREVIEW CONCIERGE</p>
+        <h2>Tell us what<br><span>you do.</span></h2>
+        <p>
+          Then we'll show you what your business could look like when the internet finally
+          starts pulling its weight.
+        </p>
+
+        <form class="preview-form" id="previewForm">
+          <label>
+            <span>BUSINESS NAME</span>
+            <input id="businessName" name="businessName" type="text" placeholder="e.g. Spike's Diner" autocomplete="organization" required>
+          </label>
+
+          <label>
+            <span>BUSINESS TYPE</span>
+            <select id="businessType" name="businessType">
+              <option>Restaurant</option>
+              <option>Barbershop</option>
+              <option>Salon</option>
+              <option>Dentist</option>
+              <option>Fitness</option>
+              <option>Auto</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <button class="button button-dark" type="submit">
+            <span>GENERATE MY PREVIEW</span><b>→</b>
+          </button>
+        </form>
+
+        <div class="preview-result" id="previewResult" hidden>
+          <span>PREVIEW QUEUED</span>
+          <strong id="previewName">YOUR BUSINESS</strong>
+          <p>Next layer: your visual world.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer section-light">
+      <div class="section-number">05</div>
+      <p class="kicker">NO AGENCY MAZE</p>
+      <h2>Preview.<br>Approve.<br><span>Launch.</span></h2>
+
+      <div class="offer-steps">
+        <div><b>01</b><span>FREE PREVIEW</span><p>See the direction before committing.</p></div>
+        <div><b>02</b><span>MAKE IT YOURS</span><p>We shape the experience around your business.</p></div>
+        <div><b>03</b><span>GO LIVE</span><p>Domain, SSL, mobile-ready and built to convert.</p></div>
+      </div>
+    </section>
+
+    <!-- FINAL PUNCH -->
+    <section class="finale section-dark">
+      <div class="finale-bg"></div>
+      <div class="section-number">06</div>
+      <div class="finale-content">
+        <p class="kicker">YOUR MOVE</p>
+        <h2>READY TO MAKE<br>PEOPLE <span>STOP?</span></h2>
+        <a class="button button-primary" href="#preview">
+          <span>GET MY FREE PREVIEW</span><b>→</b>
+        </a>
+        <p class="fine-print">Built for businesses that would rather be remembered than merely listed.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>CRAZYBIZSITES 2.0</span>
+    <span>DON'T JUST BE FOUND. BE CHOSEN.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
